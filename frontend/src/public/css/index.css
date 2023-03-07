@@ -1,0 +1,11 @@
+.rounded-Btn {
+  border-radius: 9999px;
+}
+
+.hidden-menu {
+  display: none;
+}
+
+.show-menu:hover ~ .hidden-menu {
+  display: flex;
+}
