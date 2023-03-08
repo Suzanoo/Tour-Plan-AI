@@ -4,7 +4,7 @@
 
 ## Intro
 
-โปรเจคนี้เราใช้ API 3 ตัว
+โปรเจคนี้เราใช้ API key 3 ตัว
 
 - OpenAI API สำหรับสร้าง แผนการเดินทาง (Text Completion)
 - Mapquest API สำหรับหาพิกัด ละติจูด ลองจิจูด เมื่อเราส่งชื่อ สถานที่ไปให้
@@ -26,7 +26,7 @@
 
 #### `cd desktop`
 
-จากนั้น ใช้ git ทำการ clone [repository](https://github.com/Suzanoo/Tour-Plan-AI) มาไว้ที่ desktop โดยรันคำสั่งด้านล่าง จะได้โฟลเดอร์ชื่อ Tour-Plan-AI ต่อไปจะเรียกว่า root folder
+จากนั้น ใช้ git ทำการ clone [repository](https://github.com/Suzanoo/Tour-Plan-AI) ตัวนี้มาไว้ที่ desktop โดยรันคำสั่งด้านล่าง จะได้โฟลเดอร์ชื่อ Tour-Plan-AI ต่อไปจะเรียกว่า root folder
 
 #### `git clone https://github.com/Suzanoo/Tour-Plan-AI.git`
 
@@ -59,15 +59,17 @@
 
 สมัครสมาชิก [openai.com](https://openai.com/) แล้วที่เมนู Personal ทำการสร้าง API keys แล้วนำค่าที่ได้ไปใส่ให้ตัวแปร OPENAI_API_KEY
 
-#### `OPENAI_API_KEY="5NqOvobOqKXT3BlbkF5NqOvo..."`
+#### `OPENAI_API_KEY="obkF5NqOvo..."`
 
 สมัครสมาชิก [developer.mapquest.com](https://developer.mapquest.com/user/login) สร้าง API key แล้วนำค่าที่ได้ไปใส่ให้ตัวแปร GEOCODER_API_KEY
 
 #### `GEOCODER_API_KEY=o3bk0WBy...`
 
-สมัครสมาชิก [mapbox](https://www.mapbox.com/) สร้าง API key แล้วนำค่าที่ได้ไปใส่ให้ตัวแปรชื่อ "mapboxgl.accessToken" ที่ไฟล์
+สมัครสมาชิก [mapbox](https://www.mapbox.com/) สร้าง API key แล้วนำค่าที่ได้ไปใส่ให้ตัวแปรชื่อ "mapboxgl.accessToken=" ที่ไฟล์
 
 #### `line 9: frontend/src/components/Map.jsx`
+
+#### `mapboxgl.accessToken = ''`
 
 ## ติดตั้ง Dependencies:
 
@@ -77,7 +79,7 @@
 
 ติดตั้ง dependencies จากไฟล์ package.json ของฝั่ง client โดยเข้าไปที่ โฟลเดอร์ client ก่อน
 
-#### `cd client`
+#### `cd frontend`
 
 แล้วรันคำสั่ง
 
@@ -85,7 +87,7 @@
 
 ## Run Program:
 
-จากขั้นตอนที่แล้ว ขณะนี้เราอยู่ที่โฟลเดอร์ client(ตรวจสอบได้โดยรันคำสั่ง pwd) ให้ถอยกลับมาที่ root folder โดยรันคำสั่ง
+จากขั้นตอนที่แล้ว ขณะนี้เราอยู่ที่โฟลเดอร์ fronyend (ตรวจสอบได้โดยรันคำสั่ง pwd) ให้ถอยกลับมาที่ root folder โดยรันคำสั่ง
 
 #### `cd ..`
 
@@ -113,9 +115,9 @@
 
 ### `cd frontend`
 
-### `npm run start`
+### `npm run build`
 
-สมารถเปลี่ยนโมเดลใช้ตัวที่มีประสิทธิภาพสูงของ OpenAI ได้ (มี Cost) ดูโมเดลได้ [ที่นี่](https://platform.openai.com/docs/models/overview)โดยใส่ชื่อโมเดลที่ต้องการที่
+เราสามารถเปลี่ยนโมเดลใช้ตัวที่มีประสิทธิภาพสูงของ OpenAI ได้ (มี Cost) ดูโมเดลได้ [ที่นี่](https://platform.openai.com/docs/models/overview)โดยใส่ชื่อโมเดลที่ต้องการที่
 
 ### `line 53: backend/controller/textComplete.js`
 
