@@ -77,7 +77,7 @@
 
 #### `npm install`
 
-ติดตั้ง dependencies จากไฟล์ package.json ของฝั่ง client โดยเข้าไปที่ โฟลเดอร์ client ก่อน
+ติดตั้ง dependencies จากไฟล์ package.json ของฝั่ง frontend โดยเข้าไปที่ โฟลเดอร์ frontend ก่อน
 
 #### `cd frontend`
 
@@ -87,7 +87,7 @@
 
 ## Run Program:
 
-จากขั้นตอนที่แล้ว ขณะนี้เราอยู่ที่โฟลเดอร์ fronyend (ตรวจสอบได้โดยรันคำสั่ง pwd) ให้ถอยกลับมาที่ root folder โดยรันคำสั่ง
+จากขั้นตอนที่แล้ว ขณะนี้เราอยู่ที่โฟลเดอร์ frontend (ตรวจสอบได้โดยรันคำสั่ง pwd) ให้ถอยกลับมาที่ root folder โดยรันคำสั่ง
 
 #### `cd ..`
 
@@ -95,7 +95,7 @@
 
 - start : สำหรับรันเฉพาะฝั่ง server
 - debug : สำหรับรัน debug
-- client : สำหรับรันเฉพาะฝั่ง client
+- client : สำหรับรันเฉพาะฝั่ง frontend
 - dev : สำหรับรันพร้อมกันทั้ง 2 ฝั่ง
 - เลือกรันคำสั่งที่ 4
 
@@ -111,7 +111,7 @@
 
 ## NOTE:
 
-โปรแกรม ใช้แพคเกจ [TailwindCSS](https://tailwindcss.com/) ถ้าต้องการ อัพเดท UI สามารถอัพเดทได้ที่ฝั่ง client
+โปรแกรม ใช้แพคเกจ [TailwindCSS](https://tailwindcss.com/) ถ้าต้องการ อัพเดท UI สามารถอัพเดทได้ที่ฝั่ง frontend
 
 ### `cd frontend`
 
