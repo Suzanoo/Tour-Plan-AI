@@ -5,7 +5,6 @@ const cookieParser = require('cookie-parser');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const xss = require('xss-clean');
-const hpp = require('hpp');
 
 const textGenRoute = require(`${__dirname}/backend/routes/textGenRoute`);
 
@@ -31,18 +30,6 @@ app.use('/api', limiter);
 app.use(xss());
 
 // Prevent parameter pollution
-app.use(
-  hpp({
-    whitelist: [
-      'duration',
-      'ratingsQuantity',
-      'ratingsAverage',
-      'maxGroupSize',
-      'difficulty',
-      'price',
-    ],
-  })
-);
 
 // 1.2) MIDDLEWARES
 // Development logging

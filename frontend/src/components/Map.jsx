@@ -6,7 +6,8 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import '../public/css/Map.css';
 
 // Mapbox API key here
-mapboxgl.accessToken = '';
+mapboxgl.accessToken =
+  'pk.eyJ1Ijoic3V6YW5vbyIsImEiOiJjbGVmc2t4eTYwMDBtNDZxbDkyNmlqdDhkIn0.T78HnlAr5OHoHOh1-JN99g';
 
 // Map
 const MapNew = (props) => {

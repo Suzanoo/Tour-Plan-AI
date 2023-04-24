@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 
 import { Link } from 'react-router-dom';
@@ -10,7 +11,8 @@ import '../public/css/slide.scss';
 function Slide() {
   const [activeOption, setActiveOption] = useState(1);
 
-  const tours = JSON.parse(localStorage.getItem('tours'));
+  // const tours = JSON.parse(localStorage.getItem('tours')) || [];
+  const tours = useSelector((state) => state.tours.tours);
 
   const title = [];
   const img = [];

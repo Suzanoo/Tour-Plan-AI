@@ -1,10 +1,10 @@
-const geocoder = require('../utils/geocode');
-const AppError = require('../utils/appError');
-const extractStr = require('../utils/extractStr');
-
 // CONFIGURATION
 // https://github.com/openai/openai-node
 const { Configuration, OpenAIApi } = require('openai');
+
+const geocoder = require('../utils/geocode');
+const AppError = require('../utils/appError');
+const extractStr = require('../utils/extractStr');
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
@@ -43,7 +43,7 @@ const textCompletion = async (req, res) => {
   }
 
   // 2) ------------------------------
-  const prompt = `Give me the travel plan, which I start journey from ${req.body.start}
+  const prompt = `Give me the travel plan, which start journey from ${req.body.start}
   to ${req.body.destination} in ${req.body.duration} days.
   The plan comes with budget approximate, agency contact(mobile phone number or email address if possible),
    accommodation and include this options ${req.body.options} too.`;
@@ -51,8 +51,9 @@ const textCompletion = async (req, res) => {
   try {
     const response = await openai.createCompletion({
       model: 'text-davinci-003',
+      // model: 'gpt-3.5-turbo',
       prompt: prompt,
-      max_tokens: 2500,
+      max_tokens: 3500,
       temperature: 0,
     });
 

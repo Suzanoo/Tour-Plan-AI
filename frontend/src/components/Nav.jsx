@@ -28,16 +28,16 @@ function Nav() {
         <div className="pt-2 text-brightRed text-3xl">|||</div>
         <div className="hidden md:flex space-x-6 text-sky-900">
           <a href="#" className="hover:text-darkGrayishBlue ">
-            Taurus
+            Home
           </a>
           <a href="#" className="hover:text-darkGrayishBlue ">
-            Gemini
+            Trend
           </a>
           <a href="#" className="hover:text-darkGrayishBlue">
-            Pices
+            Products
           </a>
           <a href="#" className="hover:text-darkGrayishBlue">
-            Leo
+            Contact
           </a>
         </div>
         <div className="relative">
